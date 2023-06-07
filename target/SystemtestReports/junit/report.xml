@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.366" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="User Login" name="Login with Valid Credentials - Example #1.1" time="0.041">
+<system-out><![CDATA[
+Given User navigates to Login Page..........................................passed
+When User enters valid username standard_user1234...........................passed
+And User enters valid password secret_sauce1234.............................passed
+And User Clicks on Login button.............................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Invalid Credentials" time="0.01">
+<system-out><![CDATA[
+Given User navigates to Login Page..........................................passed
+When User enters invalid username "standard_user1234".......................passed
+And User enters invalid password "secret_sauce1234".........................passed
+And User Clicks on Login button.............................................passed
+Then User should get propert error message..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with valid username and invalid password" time="0.007">
+<system-out><![CDATA[
+Given User navigates to Login Page..........................................passed
+When User enters valid username "standard_user".............................passed
+And User enters invalid password "secret_sauce1234".........................passed
+And User Clicks on Login button.............................................passed
+Then User should get propert error message..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with invalid username and valid password" time="0.006">
+<system-out><![CDATA[
+Given User navigates to Login Page..........................................passed
+When User enters valid username "standard_user1234".........................passed
+And User enters invalid password "secret_sauce".............................passed
+And User Clicks on Login button.............................................passed
+Then User should get propert error message..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login without any credentials" time="0.005">
+<system-out><![CDATA[
+Given User navigates to Login Page..........................................passed
+When User dont enter any credentials........................................passed
+And User Clicks on Login button.............................................passed
+Then User should get propert error message..................................passed
+]]></system-out>
+</testcase>
+</testsuite>
